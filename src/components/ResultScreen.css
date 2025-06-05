@@ -1,0 +1,54 @@
+:root {
+  --bg: #ffffff;
+  --text: #1e1e1e;
+  --accent: #7c3aed;
+  --button-hover: #a78bfa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1e1e1e;
+    --text: #ffffff;
+    --accent: #a78bfa;
+    --button-hover: #7c3aed;
+  }
+}
+
+.result-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
+  padding: 2rem;
+}
+
+.result-screen h2 {
+  font-size: 2.8rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.result-screen h1 {
+  font-size: 4rem;
+  margin: 1rem 0;
+  color: var(--text);
+}
+
+.result-screen button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.result-screen button:hover {
+  background-color: var(--button-hover);
+}

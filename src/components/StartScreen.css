@@ -1,0 +1,122 @@
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.start-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    270deg, 
+    var(--bg), 
+    var(--accent-light), 
+    var(--bg)
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: var(--text);
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.start-screen h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  text-shadow: 0 0 12px var(--accent);
+  margin-bottom: 1rem;
+}
+
+.start-screen p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(255 255 255 / 0.5);
+  min-height: 2.2rem;
+}
+
+.difficulty-label {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: var(--accent);
+  text-shadow: 0 0 6px rgba(0 0 0 / 0.25);
+}
+
+.difficulty-select {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 8px var(--card-shadow);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+  margin-bottom: 2rem;
+  width: 180px;
+}
+
+.difficulty-select:hover,
+.difficulty-select:focus {
+  background-color: var(--button-hover);
+  box-shadow: 0 6px 15px var(--button-hover);
+}
+
+.start-button {
+  font-size: 1.7rem;
+  font-weight: 900;
+  padding: 0.9rem 4rem;
+  border-radius: 30px;
+  border: none;
+  background-color: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 25px var(--accent-light);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+  user-select: none;
+}
+
+.start-button:hover {
+  background-color: var(--button-hover);
+  box-shadow: 0 0 40px var(--button-hover);
+}
+
+.start-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .start-screen h1 {
+    font-size: 2.8rem;
+  }
+  .start-screen p {
+    font-size: 1.2rem;
+  }
+  .difficulty-select {
+    width: 140px;
+  }
+  .start-button {
+    padding: 0.7rem 3rem;
+    font-size: 1.3rem;
+  }
+}

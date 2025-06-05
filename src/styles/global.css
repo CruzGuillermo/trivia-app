@@ -1,0 +1,46 @@
+:root {
+  /* Fondo y texto */
+  --bg: #e9f0ff;
+  --text: #1a202c;
+  --text-secondary: #4a5568;
+
+  /* Colores principales */
+  --accent: #3b82f6;
+  --accent-light: #60a5fa;
+  --button-hover: #2563eb;
+
+  /* Feedback */
+  --correct: #22c55e;
+  --correct-light: #bbf7d0;
+  --wrong: #ef4444;
+  --wrong-light: #fecaca;
+
+  /* Tarjetas y UI */
+  --card-bg: #ffffff;
+  --card-shadow: rgba(59, 130, 246, 0.2);
+
+  /* Bordes y transiciones */
+  --border-radius: 16px;
+  --transition-fast: 0.25s ease-in-out;
+}
+
+html.dark {
+  --bg: #0f172a;
+  --text: #f8fafc;
+  --text-secondary: #cbd5e1;
+
+  --accent: #60a5fa;
+  --accent-light: #93c5fd;
+  --button-hover: #3b82f6;
+
+  --correct: #22c55e;
+  --correct-light: #166534;
+  --wrong: #ef4444;
+  --wrong-light: #991b1b;
+
+  --card-bg: #1e293b;
+  --card-shadow: rgba(96, 165, 250, 0.3);
+
+  --border-radius: 16px;
+  --transition-fast: 0.25s ease-in-out;
+}
